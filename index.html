@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!-- Webapplication -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Web Calendar</title>
+
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="screen.css" />
+
+    <script type="text/javascript" src="calendar.js"></script>
+    <script type="text/javascript" src="datetime.js"></script>
+</head>
+<body onload="load()">
+    <form id="calendar" action="#">
+    <table border="0">
+        <thead>
+            <tr>
+                <th colspan="4">&nbsp;</th>
+                <th colspan="4" onclick="promptForYear()">&nbsp;</th>
+            </tr>
+            <tr class="columntitle">
+                <th title="Calendar week" class="columncalendarweektitle">CW</th>
+                <th title="Monday" class="odd">MO</th>
+                <th title="Tuesday" class="even">TU</th>
+                <th title="Wednesday" class="odd">WE</th>
+                <th title="Thursday" class="even">TH</th>
+                <th title="Friday" class="odd">FR</th>
+                <th title="Saturday" class="even">SA</th>
+                <th title="Sunday" class="odd">SU</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th colspan="2">
+                    <button type="button" value="&lt;&lt;" title="Shift year left" onclick="shiftYearLeft()">&lt;&lt;</button>
+                </th>
+                <th colspan="2">
+                    <button type="button" value="&lt;" title="Shift month left" onclick="shiftMonthLeft()">&lt;</button>
+                </th>
+                <th colspan="2">
+                    <button type="button" value="&gt;" title="Shift month right" onclick="shiftMonthRight()">&gt;</button>
+                </th>
+                <th colspan="2">
+                    <button type="button" value="&gt;&gt;" title="Shift year right" onclick="shiftYearRight()">&gt;&gt;</button>
+                </th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr class="odd">
+                <th>&nbsp;</th>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+            </tr>
+            <tr class="even">
+                <th>&nbsp;</th>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+            </tr>
+            <tr class="odd">
+                <th>&nbsp;</th>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+            </tr>
+            <tr class="even">
+                <th>&nbsp;</th>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+            </tr>
+            <tr class="odd">
+                <th>&nbsp;</th>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+            </tr>
+            <tr class="even">
+                <th>&nbsp;</th>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+                <td class="even">&nbsp;</td>
+                <td class="odd">&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <input name="year" type="hidden" />
+        <input name="month" type="hidden" />
+    </div>
+    </form>
+    
+    <hr />
+    <p>Gregorian Web Calendar with calendar weeks (ISO 8601).</p>
+    <p><b>Disclaimer:</b> No guarantee for correctness.</p>
+    <p>Copyright © 2010 by <i>Markus Kwaśnicki</i></p>
+</body>
+</html>
