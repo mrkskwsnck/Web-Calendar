@@ -24,6 +24,13 @@ function fillMonth() {
     thElements[1].innerHTML = date.getFullYear();
 
     var tdElements = document.getElementsByTagName('td');
+
+	/* Clear CSS class attribute of each TD Element */
+	for (var i = 0; i < tdElements.length; i++) {
+		tdElements[i].className = '';
+	}
+	// --
+
     var firstWeekdayOfMonth = date.getDay();
     if (firstWeekdayOfMonth == 0)
         firstWeekdayOfMonth = 6;
